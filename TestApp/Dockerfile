@@ -10,7 +10,10 @@ ENV STATIC_URL /static
 ENV STATIC_PATH /var/www/app/static
 
 #copiar da sua maquina e jogar o container pegando sempre os caminhos com ogum
-COPY ./requirements.txt /var/www/requirements.txt 
+COPY ./requirements.txt /var/www/requirements.txt
+COPY . /var/www
+
 
 #mais um run pra executa a instalaçãp do pip e rodar meu requirements
 RUN pip install -r /var/www/requirements.txt
+
